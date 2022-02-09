@@ -1,7 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
-body {
-    font-family: 'Outfit', sans-serif;
-    background-color:var(--light-gray) ;
-    font-size: 15px;
+/* ;;1 */
+:root {
+    --white: hsl(0. 0%. 100%);
+    --light-gray: hsl(212. 45%. 89%);
+    --grayish-blue: hsl(220. 15%. 55%);
+    --dark-blue: hsl(218. 44%. 22%);
 }
 
+/* ;;2 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ;;3 */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color:var(--grayish-blue);
+    font-size: 15px;
+    /* ;;5 */
+    margin: 1.25rem;
+    /* ;;8 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 1px);
+}
+
+/* ;;4 */
+.container {
+    background-color: var(--white);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    /* ;;12 */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ;;6 */
+img {
+    width: 100%;
+}
+
+/* ;;7 */
+.container img {
+    border-radius: 0.6625rem;
+    margin-bottom: 1rem;
+}
+
+/* ;;9 */
+.container h1 {
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container p {
+    color: var(--grayish-blue);
+}
+/* ;;10 */
+@media (min-width: 500px) {
+    .container {
+        width: 495px; 
+    }
+}
+/* ;;11 */
+@media (max-width: 360px) {
+    .container {
+        width: 320px;
+    }
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a:nth-child(2) {
+    color: red;
+}
+
+/* ;;13 */
+/* membuat tombol toggle */
+.wadah_bulat{
+    position: relative;
+    background: #fff;
+    /* display block */
+    width: 120px;
+    height: 60px;
+    border-radius: 60px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgba(204, 49, 49, 0.1), inset 0 8px 8px rgba(0, 0, 0, 0.1), 
+    inset 0 -4px 4px rgba(0, 0, 0, 0.1) ;
+    /* ;;15 */
+    cursor: pointer;
+}
+
+/* ;;17 */
+.wadah_bulat.active {
+    background: rgb(66, 66, 66);
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1), 
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), 
+    inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ;;14 */
+.wadah_bulat .bulat{
+    top: 0px;
+    bottom: 0px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 4px 4px rgba(255, 255, 255, 1), inset 0 -4px 4px rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    transform: scale(0.9);
+    background: linear-gradient(to bottom, #f7f7, #f9f9f9);
+    transition: 0.5s;
+}
+
+/* ;;16 */
+.wadah_bulat.active .bulat{
+    left: 60px;
+    /* ;;18 */
+    background: linear-gradient(to bottom, #444, #222);
+    box-shadow: 0 8px 40px rgba(221, 218, 218, 0.5), 
+        inset 0 4px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* ;;19 */
+body.active {
+    --white: #252525;
+    --light-gray: #121212;
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(0, 0%, 100%);
+}

@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cards qr code</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- tombol toggle -->
+    <div id="wadah_bulat" class="wadah_bulat">
+        <i class="bulat"></i>
+    </div>
+
     <!--container/cards-->
-    <div>
+    <div class="container">
         <img src="./images/image-qr-code.png" alt="qr code">
         <h1>
             Improve your front-end skills by building projects
@@ -16,13 +22,26 @@
         <p>
             Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
         </p>
+    </div>
+    <div class="attribution">
         Challenge by
-
-        Frontend Mentor
+        <a href="#">
+            Frontend Mentor
+        </a>
         .
         Coded by
-
-        Your Name Here
+        <a href="https://github.com/sanestfman">
+            SanestFman
+        </a>
     </div>
+
+    <script>
+        const body = document.querySelector('body');
+        const wadah = document.getElementById('wadah_bulat');
+        wadah.onclick = function () {
+            wadah.classList.toggle('active');
+            body.classList.toggle('active');
+        };
+    </script>
 </body>
 </html>
