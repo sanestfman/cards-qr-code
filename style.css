@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 /* ;;1 */
 :root {
-    --white: hsl(0. 0%. 100%);
+    --white: rgb(255, 240, 240);
     --light-gray: hsl(212. 45%. 89%);
-    --grayish-blue: hsl(220. 15%. 55%);
+    --grayish-blue: rgb(157, 178, 214) ;
     --dark-blue: hsl(218. 44%. 22%);
 }
 
@@ -125,6 +125,7 @@ img {
 /* ;;16 */
 .wadah_bulat.active .bulat{
     left: 60px;
+    transition: 00.5s;
     /* ;;18 */
     background: linear-gradient(to bottom, #444, #222);
     box-shadow: 0 8px 40px rgba(221, 218, 218, 0.5), 
@@ -136,6 +137,6 @@ img {
 body.active {
     --white: #252525;
     --light-gray: #121212;
-    --grayish-blue: hsl(220, 15%, 55%);
+    --grayish-blue: hsl(219, 28%, 12%);
     --dark-blue: hsl(0, 0%, 100%);
 }
